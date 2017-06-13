@@ -5,6 +5,9 @@
 # Mac
 .DS_Store
 
+# Git
+.git
+
 # dependencies
 node_modules
 
