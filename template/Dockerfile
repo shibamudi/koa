@@ -5,4 +5,5 @@ COPY package.json yarn.lock $PROJECT_DIR/
 RUN yarn install && yarn cache clean
 COPY . $PROJECT_DIR
 EXPOSE $PROT
+HEALTHCHECK CMD curl -f http://0.0.0.0:3000 || exit 1
 ENTRYPOINT ["yarn", "run", "build", "&&", "yarn", "run", "start"]
